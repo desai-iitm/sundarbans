@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sundarbans House</title>
+  <link rel="icon" type="image/png" href="iitmlogo.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Chakra+Petch:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    /* Fade overlay animation */
+    @keyframes fadeOverlay {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: black;
+      animation: fadeOverlay 1.5s ease-out forwards;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Chakra Petch', sans-serif;
+      overflow-x: hidden;
+      background: white;
+      color: white;
+    }
+
+    /* Background GIF */
+    .background {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    /* Tiger icon */
+    .tiger-icon {
+      position: fixed;
+      top: 20px;
+      left: 24px;
+      width: 56px;
+      height: auto;
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    /* Top-right tabs */
+    .contact, .academia {
+      font-family: 'Chakra Petch', sans-serif;
+      position: fixed;
+      top: 20px;
+      z-index: 20;
+      font-size: 15px;
+      color: white;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .contact { right: 28px; }
+    .academia { right: 120px; }
+
+    .contact:hover, .academia:hover { opacity: 0.8; }
+
+    /* Centered heading */
+    .center-anchor {
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    .title {
+      font-family: 'Amatic SC', cursive;
+      font-size: 64px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin: 0;
+      color: white;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      margin: 0;
+      letter-spacing: 1px;
+      color: white;
+      opacity: 0;
+      animation: subtitleFade 2s ease-in forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes subtitleFade {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Bottom navbar */
+    .navbar {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 36px;
+      z-index: 20;
+    }
+
+    .navbar a {
+      font-family: 'Chakra Petch', sans-serif;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 1px;
+      transition: opacity 0.2s ease;
+    }
+
+    .navbar a:hover { opacity: 0.8; }
+
+    /* Responsive adjustments */
+    @media (max-width: 700px) {
+      .title { font-size: 40px; letter-spacing: 3px; }
+      .subtitle { font-size: 18px; }
+      .tiger-icon { width: 44px; left: 12px; top: 12px; }
+      .contact { right: 12px; top: 14px; font-size: 13px; }
+      .academia { right: 90px; top: 14px; font-size: 13px; }
+      .navbar { gap: 20px; bottom: 14px; }
+      .center-anchor { top: 38%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background GIF -->
+  <div class="background">
+    <img src="patronus.gif" alt="Background GIF">
+  </div>
+
+  <!-- Tiger icon -->
+  <img src="tiger.gif" class="tiger-icon" alt="Tiger Icon">
+
+  <!-- Top-right tabs -->
+  <a href="academia.html" class="academia">ACADEMIA</a>
+  <a href="contact.html" class="contact">GET IN TOUCH</a>
+
+  <!-- Centered heading -->
+  <div class="center-anchor">
+    <h1 class="title">Sundarbans House</h1>
+    <h2 class="subtitle">IIT Madras</h2>
+  </div>
+
+  <!-- Bottom navbar -->
+  <nav class="navbar">
+    <a href="about.html">ABOUT</a>
+    <a href="clubs.html">CLUBS</a>
+    <a href="event.html">EVENTS</a>
+    <a href="gallery.html">GALLERY</a>
+  </nav>
+
+</body>
+</html>
