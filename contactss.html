@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get in Touch – Sundarbans</title>
+  <link rel="icon" type="image/png" href="iitmlogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Chakra+Petch:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Chakra Petch', sans-serif;
+      background: white;
+      color: black;
+    }
+
+    /* Banner */
+    .banner {
+      position: relative;
+      height: 40vh;
+      overflow: hidden;
+      background: url('patronus.gif') center/cover no-repeat;
+      filter: brightness(70%);
+    }
+    .page-title {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Amatic SC', cursive;
+      font-size: 64px;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+    }
+
+    /* Tiger icon */
+    .tiger-icon {
+      position: fixed;
+      top: 20px;
+      left: 24px;
+      width: 56px;
+      height: auto;
+      z-index: 20;
+    }
+
+    /* Top-right tabs */
+    .top-right-tab {
+      position: fixed;
+      top: 20px;
+      font-family: 'Chakra Petch', sans-serif;
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      letter-spacing: 1px;
+      z-index: 20;
+    }
+    .academia-tab { right: 120px; }
+    .contact-tab { right: 28px; }
+    .top-right-tab:hover { opacity: 0.8; }
+
+    /* Bottom navbar */
+    .bottom-navbar {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 36px;
+      z-index: 20;
+    }
+    .bottom-navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 1px;
+      transition: opacity 0.2s ease;
+    }
+    .bottom-navbar a:hover { opacity: 0.8; }
+
+    /* Content */
+    .content {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .group-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background: #f9f9f9;
+    }
+    .group-info {
+      max-width: 70%;
+    }
+    .group-name {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .group-desc {
+      font-size: 14px;
+      color: #555;
+      margin-top: 4px;
+    }
+    .group-buttons button, .group-buttons a {
+      margin-left: 8px;
+      padding: 6px 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      background: #28a745;
+    }
+    .group-buttons button:hover, .group-buttons a:hover { opacity: 0.8; }
+    .copy-feedback {
+      color: green;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1 class="page-title">GET IN TOUCH</h1>
+  </div>
+
+  <!-- Tiger Icon -->
+  <img src="tiger.gif" class="tiger-icon" alt="Tiger">
+
+  <!-- Top-right tabs -->
+  <a href="academia.html" class="top-right-tab academia-tab">ACADEMIA</a>
+  <a href="contact.html" class="top-right-tab contact-tab">GET IN TOUCH</a>
+
+  <!-- Content -->
+  <div class="content">
+
+    <!-- Main Group -->
+    <div class="group-card">
+      <div class="group-info">
+        <div class="group-name">Sundarbans House (Main)</div>
+        <div class="group-desc">Official Sundarbans house sign-up / main group form</div>
+      </div>
+      <div class="group-buttons">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdP9gY3ET4EylNi771CaXQ8ihmsqEdjbat7rvSDZAsu2j0a9Q/viewform" target="_blank">Open</a>
+        <button onclick="copyLink('https://docs.google.com/forms/d/e/1FAIpQLSdP9gY3ET4EylNi771CaXQ8ihmsqEdjbat7rvSDZAsu2j0a9Q/viewform', 'Main Group')">Copy</button>
+      </div>
+    </div>
+
+    <!-- Regional Groups -->
+    <div class="group-card">
+      <div class="group-info">
+        <div class="group-name">Chandigarh Region</div>
+        <div class="group-desc">Chandigarh regional sign-up — Coordinator: Aakash Rawal — <a href="tel:+918114417334">+918114417334</a></div>
+      </div>
+      <div class="group-buttons">
+        <a href="https://forms.gle/roBd62dYk6829eYCA" target="_blank">Open</a>
+        <button onclick="copyLink('https://forms.gle/roBd62dYk6829eYCA', 'Chandigarh Region')">Copy</button>
+      </div>
+    </div>
+
+    <div class="group-card">
+      <div class="group-info">
+        <div class="group-name">Hyderabad Region</div>
+        <div class="group-desc">Hyderabad regional sign-up — Coordinator: Dishi Gupta — <a href="tel:+919392160798">+919392160798</a></div>
+      </div>
+      <div class="group-buttons">
+        <a href="https://forms.gle/d8QRQ5eXooDHL8Db6" target="_blank">Open</a>
+        <button onclick="copyLink('https://forms.gle/d8QRQ5eXooDHL8Db6', 'Hyderabad Region')">Copy</button>
+      </div>
+    </div>
+
+    <!-- Add more regions in the same format -->
+
+    <div id="copy-feedback" class="copy-feedback"></div>
+  </div>
+
+  <!-- Bottom Navbar -->
+  <nav class="bottom-navbar">
+    <a href="about.html">ABOUT</a>
+    <a href="clubs.html">CLUBS</a>
+    <a href="events.html">EVENTS</a>
+    <a href="gallery.html">GALLERY</a>
+  </nav>
+
+  <script>
+    function copyLink(link, name) {
+      navigator.clipboard.writeText(link).then(() => {
+        const feedback = document.getElementById('copy-feedback');
+        feedback.textContent = `Link copied: ${name}`;
+        setTimeout(() => { feedback.textContent = ''; }, 2000);
+      }).catch(err => console.error('Copy failed', err));
+    }
+  </script>
+
+</body>
+</html>
